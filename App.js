@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-import { MapScreen, ListScreen, BoardScreen } from './screens/index';
+import { MapScreen, ListScreen, BoardScreen, EtcScreen } from './screens/index';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 const TapNavigator = createBottomTabNavigator({
@@ -41,7 +41,7 @@ const TapNavigator = createBottomTabNavigator({
     })
   },
   ETC: {
-    screen: BoardScreen,
+    screen: EtcScreen,
     navigationOptions: () => ({
       tabBarIcon: () => (
         <MaterialCommunityIcons
