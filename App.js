@@ -1,9 +1,18 @@
 import React from 'react';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
-import { MapScreen, ListScreen, BoardScreen, EtcScreen } from './screens/index';
+import { createBottomTabNavigator, createAppContainer, createStackNavigator } from 'react-navigation';
+import { MapScreen, ListScreen, BoardScreen, EtcScreen, LoginScreen } from './screens/index';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
-const TapNavigator = createBottomTabNavigator({
+const BoardStack = createStackNavigator({
+  Board: BoardScreen,
+  Login: LoginScreen
+},{
+  initialRouteName: 'Board',
+  header: null,
+  headerMode: 'none',
+})
+
+const TabNavigator = createBottomTabNavigator({
   Map: {
     screen: MapScreen,
     navigationOptions: () => ({
@@ -29,7 +38,7 @@ const TapNavigator = createBottomTabNavigator({
     })
   },
   Board: {
-    screen: BoardScreen,
+    screen: BoardStack,
     navigationOptions: () => ({
       tabBarIcon: () => (
         <Ionicons
@@ -65,7 +74,7 @@ const TapNavigator = createBottomTabNavigator({
   }
 });
 
-const AppContainer = createAppContainer(TapNavigator);
+const AppContainer = createAppContainer(TabNavigator);
 
 export default function App() {
   return (

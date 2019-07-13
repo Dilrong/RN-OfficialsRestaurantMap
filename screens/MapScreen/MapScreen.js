@@ -4,6 +4,7 @@ import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
 import firebase from '../../firebase';
 
 export default class MapScreen extends React.Component{
+
     state = {
         data: []
     }
