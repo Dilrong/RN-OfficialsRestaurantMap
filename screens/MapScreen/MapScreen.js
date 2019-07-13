@@ -46,9 +46,9 @@ export default class MapScreen extends React.Component{
                         image={require('../../assets/pin.png')}
                         coordinate={marker.location}
                     >
-                        <Callout>
-                            <Text>{marker.name}</Text>
-                            <Text>{marker.address}</Text>
+                        <Callout style={styles.callout}>
+                            <Text style={styles.title}>{marker.name}</Text>
+                            <Text style={styles.descrtion}>{marker.address}</Text>
                         </Callout>
                     </Marker>
                 ))}
@@ -67,5 +67,18 @@ const styles = StyleSheet.create({
     mapview: {
         flex: 1, 
         ...StyleSheet.absoluteFillObject,
-      }
+    },
+    callout: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    title: {
+        fontWeight: '500',
+        fontSize: 14,
+        paddingBottom: 4
+    },
+    descrtion: {
+        fontWeight: '100',
+        fontSize: 10
+    }
 })
