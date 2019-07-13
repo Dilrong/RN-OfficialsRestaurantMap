@@ -30,8 +30,11 @@ export default class ListScreen extends React.Component{
                 <View style={styles.searchBar}>
                     <TextInput
                         style={styles.searchInput}
+                        placeholder="Search"
+                        placeholderTextColor="#bdc3c7"
                     />
-                    <ScrollView>
+                </View>
+                <ScrollView style={styles.scroll}>
                         {data.map((data, index) => (
                             <RestaurantItem
                                 key={index}
@@ -39,8 +42,6 @@ export default class ListScreen extends React.Component{
                             />
                         ))}
                     </ScrollView>
-                </View>
-                
             </SafeAreaView>
         )
     }
@@ -52,6 +53,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#182026'
+    },
+    scroll: {
+        flex: 1,
+        width: '100%',
+        marginTop: 10,
+        marginLeft: 20
     },
     searchBar: {
         backgroundColor: '#1f2b32',

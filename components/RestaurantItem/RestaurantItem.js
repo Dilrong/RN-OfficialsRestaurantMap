@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Linking, TouchableHighlight } from 'react-native';
 
 const RestaurantItem = ({data}) => (
-    <TouchableHighlight onPress={()=>{Linking.openURL(data.url)}} underlayColor="white">
+    <TouchableHighlight onPress={()=>{Linking.openURL(data.url)}} underlayColor="#1f2b32">
     <View>
         <View style={styles.rowContainer}>
             <Image style={styles.thumb} source={{uri: data.image}}/>
@@ -32,12 +32,14 @@ const styles = StyleSheet.create({
     title: {
       fontSize: 12,
       fontWeight: 'bold',
-      color: '#ffffff'
+      color: '#ffffff',
+      marginBottom: 5
     },
     address: {
         fontSize: 10,
         fontWeight: '500',
-        color: '#ffffff'
+        color: '#ffffff',
+        marginBottom: 5
     },
     visitor: {
         fontSize: 8,
