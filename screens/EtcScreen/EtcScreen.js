@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, View, Text, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Text, Image, TouchableHighlight, StatusBar } from 'react-native';
 
 export default class EtcScreen extends React.Component{
     render(){
@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#182026'
+        backgroundColor: '#182026',
+        marginTop: StatusBar.currentHeight
     },
     profile: {
         width: '100%'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, View, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, SafeAreaView, View, TextInput, ScrollView, StatusBar } from 'react-native';
 import { RestaurantItem } from '../../components';
 import firebase from '../../firebase';
 
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#182026'
+        backgroundColor: '#182026',
+        marginTop: StatusBar.currentHeight
     },
     scroll: {
         flex: 1,

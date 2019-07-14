@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, View, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Image, TouchableHighlight, StatusBar } from 'react-native';
 
 export default class BoardScreen extends React.Component{
     constructor(props){
@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#182026'
+        backgroundColor: '#182026',
+        marginTop: StatusBar.currentHeight
     }
 })

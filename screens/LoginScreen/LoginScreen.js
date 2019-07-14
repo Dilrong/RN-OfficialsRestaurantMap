@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, ImageBackground, Image, TouchableHighlight } from 'react-native';
+import { StyleSheet, SafeAreaView, ImageBackground, Image, TouchableHighlight, StatusBar } from 'react-native';
 import firebase from '../../firebase';
 
 export default class EtcScreen extends React.Component{
@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#182026'
+        backgroundColor: '#182026',
+        marginTop: StatusBar.currentHeight
     },
     profile: {
         width: '100%'
