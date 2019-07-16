@@ -5,7 +5,8 @@ import firebase from '../../firebase';
 
 export default class ListScreen extends React.Component{
     state = {
-        data: []
+        data: [],
+        keyword: ''
     }
 
     componentDidMount(){
@@ -25,6 +26,20 @@ export default class ListScreen extends React.Component{
 
     render(){
         const { data } = this.state;
+        const mapToList = (data) => {
+            console.log(this.state.keyword)
+            data = data.filter(
+                (data) => {
+                    return data.name.indexOf(this.state.keyword) > -1;
+                }
+            );
+
+            return data.map((data, index) => {
+                return <RestaurantItem
+                key={index}
+                data={data}/>
+            })
+        }
         return(
             <SafeAreaView style={styles.container}>
                 <View style={styles.searchBar}>
@@ -32,15 +47,12 @@ export default class ListScreen extends React.Component{
                         style={styles.searchInput}
                         placeholder="Search"
                         placeholderTextColor="#bdc3c7"
+                        onChangeText={(keyword) => this.setState({keyword})}
+                        value={this.state.keyword}
                     />
                 </View>
                 <ScrollView style={styles.scroll}>
-                        {data.map((data, index) => (
-                            <RestaurantItem
-                                key={index}
-                                data={data}
-                            />
-                        ))}
+                        {mapToList(data)}
                     </ScrollView>
             </SafeAreaView>
         )
