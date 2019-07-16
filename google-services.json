@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "707502415527",
+    "firebase_url": "https://officialsrestaurantmap.firebaseio.com",
+    "project_id": "officialsrestaurantmap",
+    "storage_bucket": "officialsrestaurantmap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707502415527:android:2988d4dd7a6558c8",
+        "android_client_info": {
+          "package_name": "com.dilrong.OfficialsRestaurantMap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707502415527-pt6bea77lbcd5n84siea1nf0vppe8mim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5pNR_GVtypAqKDDVbHZcdAXJV8jA3YUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707502415527-pt6bea77lbcd5n84siea1nf0vppe8mim.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
