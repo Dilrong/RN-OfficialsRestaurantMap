@@ -14,8 +14,8 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#182026"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -24,7 +24,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.dilrong.OfficialsRestaurantMap",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.707502415527-kc5f057i4s5a801g5agcbljqi00vf3io"
+        }
+      }
+    },
+    "android": {
+      "package": "com.dilrong.OfficialsRestaurantMap",
+      "googleServicesFile": "./google-services.json"
     }
   }
 }

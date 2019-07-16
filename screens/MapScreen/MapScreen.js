@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, Text, StatusBar } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker, Callout, Linking } from 'react-native-maps';
 import firebase from '../../firebase';
+import { Linking } from 'expo';
 
 export default class MapScreen extends React.Component{
 
@@ -47,7 +48,9 @@ export default class MapScreen extends React.Component{
                         image={require('../../assets/pin.png')}
                         coordinate={marker.location}
                     >
-                        <Callout style={styles.callout}>
+                        <Callout 
+                            style={styles.callout}
+                            onPress={()=>{Linking.openURL(marker.url)}}>
                             <Text style={styles.title}>{marker.name}</Text>
                             <Text style={styles.descrtion}>{marker.address}</Text>
                         </Callout>
