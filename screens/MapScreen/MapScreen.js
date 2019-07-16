@@ -1,8 +1,7 @@
 import React from 'react';
-import { StyleSheet, SafeAreaView, Text, StatusBar } from 'react-native';
-import MapView, { PROVIDER_GOOGLE, Marker, Callout, Linking } from 'react-native-maps';
+import { StyleSheet, SafeAreaView, Text, StatusBar, Linking } from 'react-native';
+import MapView, { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
 import firebase from '../../firebase';
-import { Linking } from 'expo';
 
 export default class MapScreen extends React.Component{
 

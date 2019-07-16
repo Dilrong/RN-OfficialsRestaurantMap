@@ -62,6 +62,9 @@ const styles = StyleSheet.create({
         marginLeft: 20
     },
     searchBar: {
+        width: '100%', 
+        marginTop: 10,
+        marginLeft: 30,
         backgroundColor: '#1f2b32',
         borderRadius: 8,
         shadowColor: "#000",
@@ -74,7 +77,7 @@ const styles = StyleSheet.create({
         elevation: 5,
     },
     searchInput: {
-        width: 330, 
+        width: '100%', 
         height: 30,
         color: '#ffffff',
         margin: 5,
