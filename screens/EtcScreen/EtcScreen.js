@@ -14,19 +14,19 @@ export default class EtcScreen extends React.Component{
                 </View>
                 <View style={{backgroundColor: '#ffffff', width: '100%', height: 1}}/>
                 <View style={styles.menuList}>
-                    <TouchableHighlight underlayColor="#1f2b32" onPress={()=>{Linking.openURL('https://dilrong.blog.me/')}}>
+                    <TouchableHighlight underlayColor="#182026" onPress={()=>{Linking.openURL('https://dilrong.blog.me/')}}>
                         <Text style={styles.menuList__text}>Announcements</Text>
                     </TouchableHighlight>
-                    <TouchableHighlight underlayColor="#1f2b32" onPress={()=>{Linking.openURL('https://dilrong.blog.me/221511909943')}}>
+                    <TouchableHighlight underlayColor="#182026" onPress={()=>{Linking.openURL('https://dilrong.blog.me/221511909943')}}>
                         <Text style={styles.menuList__text}>Terms of service</Text>
                     </TouchableHighlight>
-                    <TouchableHighlight underlayColor="#1f2b32">
+                    <TouchableHighlight underlayColor="#182026">
                         <Text style={styles.menuList__text}>Push Alert</Text>
                     </TouchableHighlight>
-                    <TouchableHighlight underlayColor="#1f2b32">
+                    <TouchableHighlight underlayColor="#182026" onPress={()=>{this.props.navigation.navigate('Version')}}>
                         <Text style={styles.menuList__text}>Version</Text>
                     </TouchableHighlight>
-                    <TouchableHighlight underlayColor="#1f2b32">
+                    <TouchableHighlight underlayColor="#182026">
                         <Text style={styles.menuList__text}>Logout</Text>
                     </TouchableHighlight>
                 </View>

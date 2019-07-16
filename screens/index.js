@@ -3,11 +3,13 @@ import ListScreen from './ListScreen/ListScreen';
 import BoardScreen from './BoardScreen/BoardScreen';
 import EtcScreen from './EtcScreen/EtcScreen';
 import LoginScreen from './LoginScreen/LoginScreen';
+import VersionScreen from './VersionScreen/VersionScreen';
 
 export {
     MapScreen,
     ListScreen,
     BoardScreen,
     EtcScreen,
-    LoginScreen
+    LoginScreen,
+    VersionScreen
 }

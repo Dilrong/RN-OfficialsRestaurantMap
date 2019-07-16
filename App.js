@@ -1,12 +1,21 @@
 import React from 'react';
 import { createBottomTabNavigator, createAppContainer, createStackNavigator } from 'react-navigation';
-import { MapScreen, ListScreen, BoardScreen, EtcScreen, LoginScreen } from './screens/index';
+import { MapScreen, ListScreen, BoardScreen, EtcScreen, LoginScreen, VersionScreen } from './screens/index';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+
+const EtcStack = createStackNavigator({
+  Etc: EtcScreen,
+  Version: VersionScreen,
+}, {
+  initialRouteName: 'Etc',
+  header: null,
+  headerMode: 'none',
+})
 
 const BoardStack = createStackNavigator({
   Board: BoardScreen,
   Login: LoginScreen
-},{
+}, {
   initialRouteName: 'Board',
   header: null,
   headerMode: 'none',
@@ -50,7 +59,7 @@ const TabNavigator = createBottomTabNavigator({
     })
   },
   ETC: {
-    screen: EtcScreen,
+    screen: EtcStack,
     navigationOptions: () => ({
       tabBarIcon: () => (
         <MaterialCommunityIcons
