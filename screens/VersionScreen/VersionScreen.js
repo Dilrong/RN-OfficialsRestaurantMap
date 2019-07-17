@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View, Text, Image, StatusBar } from 'react-native';
+import { expo } from '../../app.json';
 
 export default class VersionScreen extends React.Component{
     render(){
@@ -10,7 +11,7 @@ export default class VersionScreen extends React.Component{
                     <View style={{backgroundColor: '#ffffff', width: '100%', height: 1}}/>
                 </View>
                 <Image source={require('../../assets/Logo.png')}/>
-                <Text style={styles.versionText}>Current v1.0.0</Text>
+                <Text style={styles.versionText}>Current v{expo.version}</Text>
             </SafeAreaView>
         )
     }
