@@ -6,11 +6,7 @@ export default class EtcScreen extends React.Component{
         return(
             <SafeAreaView style={styles.container}>
                 <View style={styles.profile}>
-                    <Image 
-                        source={{uri: 'https://cdnimg.melon.co.kr/cm/artistcrop/images/002/61/143/261143_500.jpg?32b7688ac5eb168fa11891d572f7b23d/melon/resize/416/quality/80/optimize'}}
-                        style={{width: 70, height: 70, borderRadius: 70/2}}
-                    />
-                    <Text style={styles.profile__text}>Hello!</Text>
+                    <Text style={styles.profile__text}>ETC</Text>
                 </View>
                 <View style={{backgroundColor: '#ffffff', width: '100%', height: 1}}/>
                 <View style={styles.menuList}>
@@ -20,14 +16,8 @@ export default class EtcScreen extends React.Component{
                     <TouchableHighlight underlayColor="#182026" onPress={()=>{Linking.openURL('https://dilrong.blog.me/221511909943')}}>
                         <Text style={styles.menuList__text}>Terms of service</Text>
                     </TouchableHighlight>
-                    <TouchableHighlight underlayColor="#182026">
-                        <Text style={styles.menuList__text}>Push Alert</Text>
-                    </TouchableHighlight>
                     <TouchableHighlight underlayColor="#182026" onPress={()=>{this.props.navigation.navigate('Version')}}>
                         <Text style={styles.menuList__text}>Version</Text>
-                    </TouchableHighlight>
-                    <TouchableHighlight underlayColor="#182026">
-                        <Text style={styles.menuList__text}>Logout</Text>
                     </TouchableHighlight>
                 </View>
             </SafeAreaView>

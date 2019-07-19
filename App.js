@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator, createAppContainer, createStackNavigator } from 'react-navigation';
-import { MapScreen, ListScreen, BoardScreen, EtcScreen, LoginScreen, VersionScreen } from './screens/index';
+import { MapScreen, ListScreen, TaxScreen, BoardScreen, EtcScreen, LoginScreen, VersionScreen } from './screens/index';
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 const EtcStack = createStackNavigator({
@@ -46,12 +46,12 @@ const TabNavigator = createBottomTabNavigator({
       )
     })
   },
-  Board: {
-    screen: BoardStack,
+  Tax: {
+    screen: TaxScreen,
     navigationOptions: () => ({
       tabBarIcon: () => (
         <Ionicons
-        name='ios-chatboxes'
+        name='ios-card'
         color='white'
         size={24}
         />

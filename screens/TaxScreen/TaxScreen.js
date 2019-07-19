@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, View, TextInput, ScrollView, StatusBar } from 'react-native';
-import { RestaurantItem } from '../../components';
+import { TaxItem } from '../../components';
 import firebase from '../../firebase';
 
-export default class ListScreen extends React.Component{
+export default class TaxScreen extends React.Component{
     state = {
         data: [],
         keyword: ''
@@ -15,7 +15,7 @@ export default class ListScreen extends React.Component{
 
     getFirebaseData(){
         const db = firebase.firestore();
-        db.collection("restaurant").get().then(querySnapshot => {
+        db.collection("tax").get().then(querySnapshot => {
             let dataSet = querySnapshot.docs.map(doc => doc.data());
 
             this.setState({
@@ -34,7 +34,7 @@ export default class ListScreen extends React.Component{
             );
 
             return data.map((data, index) => {
-                return <RestaurantItem
+                return <TaxItem
                 key={index}
                 data={data}/>
             })
